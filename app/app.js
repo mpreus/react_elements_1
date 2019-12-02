@@ -1,16 +1,20 @@
 /* element of the shopping basket with limited number of things to be bought, conditional rendering and basic style */
-class HeaderElement extends React.Component {
-	render() {
-		return (
-			<div className="item">
-				<img src="../img/67225.jpg" alt="CD picture"/>
-				<div>
-					<h3>Electro music CD</h3>
-					<p>music for demanding listeners</p>
-				</div>
+const HeaderElement = () => {
+	return (
+		<div className="item">
+			<img src="../img/67225.jpg" alt="CD picture"/>
+			<div>
+				<h3>Electro music CD</h3>
+				<p>music for demanding listeners</p>
 			</div>
-		)
-	}
+		</div>
+	)
+}
+
+const BasketName = () => {
+	return (
+		<h2>Your basket</h2>
+	)
 }
 
 class App extends React.Component {
@@ -45,6 +49,7 @@ class App extends React.Component {
 
 		return (
 			<React.Fragment>
+				<BasketName />
 				<HeaderElement />
 				<div> 		{/* first button must be disabled when shopping cart is empty */}
 					<p>Add amount ({this.state.availableProducts} left in stock):</p>
