@@ -3,7 +3,7 @@ class HeaderElement extends React.Component {
 	render() {
 		return (
 			<div className="item">
-				<img src="img/67225.jpg" alt="CD picture"/>
+				<img src="../img/67225.jpg" alt="CD picture"/>
 				<div>
 					<h3>Electro music CD</h3>
 					<p>music for demanding listeners</p>
@@ -47,7 +47,7 @@ class App extends React.Component {
 			<React.Fragment>
 				<HeaderElement />
 				<div> 		{/* first button must be disabled when shopping cart is empty */}
-					<p>Add amount ({this.state.availableProducts} in stock now):</p>
+					<p>Add amount ({this.state.availableProducts} left in stock):</p>
 					<button disabled={this.state.shoppingCart === 0 ? true : false} onClick={this.handleRemoveFromCart}>-</button>
 					{/* to make the number of things grey we use inline style: */}
 					<span style={ spanStyle }>{this.state.shoppingCart}</span> {/* takes the value from the state */}
